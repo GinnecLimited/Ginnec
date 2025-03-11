@@ -1,0 +1,27 @@
+<form id="contactForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" name="phone" required>
+
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+
+    <button type="submit">Send Message</button>
+</form>
+
+<!-- Success Message -->
+<p id="successMessage" style="color: green; display: none;">Your message has been saved!</p>
+
+<script>
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent page reload
+        
+        // Simulate saving data (for now)
+        document.getElementById('successMessage').style.display = 'block';
+
+        // Clear the form fields
+        document.getElementById('contactForm').reset();
+    });
+</script>
